@@ -1,14 +1,31 @@
-# Aplicação Web de Cadastro de Usuários
+# 📝 Aplicação Web de Cadastro de Curso
 
 Esta é uma aplicação fullstack com **React no frontend**, **Node.js no backend** e **PostgreSQL como banco de dados**.
-Ela permite que usuários insiram seus dados pessoais e sua pretensão de curso (tecnólogo ou bacharel) para cadastro.
+
+## ✅ Funcionalidades
+
+- Cadastro de novos usuários com:
+  - Nome
+  - Idade
+  - Localização
+  - Tipo de curso: Tecnólogo ou Bacharel
+- Armazenamento das informações no banco PostgreSQL
+- Integração via API RESTful
+- Interface simples e responsiva
+- Deploy e execução via Docker Compose
+
+---
+
+## 📷 Captura de Tela
+
+![Tela de Cadastro](![alt text](image.png))
 
 ---
 
 ## 📁 Estrutura do Projeto
 
 ```
-Web_Work/
+Project_DevOps/
 ├── backend/
 │   ├── routes/
 │   │   └── users.js
@@ -54,7 +71,7 @@ Crie um banco de dados chamado:
 devops_work
 ```
 
-Depois crie a tabela executando no pgAdmin ou terminal SQL:
+Depois, crie a tabela executando:
 
 ```sql
 CREATE TABLE usuarios (
@@ -66,12 +83,12 @@ CREATE TABLE usuarios (
 );
 ```
 
-Usuário padrão do banco:
+Variáveis padrão:
 
-- user: `postgres`
-- senha: `nayara`
-- host: `localhost`
-- porta: `5432`
+- DB_USER: `postgres`
+- DB_PASSWORD: `nayara`
+- DB_HOST: `localhost`
+- DB_PORT: `5432`
 
 ---
 
@@ -84,32 +101,25 @@ git clone https://github.com/nayarasn/Project_DevOps.git
 cd Project_DevOps
 ```
 
-### 2. Rodar o backend
+### 2. Backend
 
 ```bash
 cd backend
 npm install
-cp .env.example .env  # ou crie manualmente .env com as variáveis abaixo
 
-# Conteúdo do .env
-DB_USER=postgres
+# Crie o .env:
+echo "DB_USER=postgres
 DB_PASSWORD=nayara
 DB_HOST=localhost
 DB_PORT=5432
-DB_DATABASE=devops_work
+DB_DATABASE=devops_work" > .env
 
-node index.js
-
-npm start 
+npm start
 ```
 
-Você deve ver:
-```
-Servidor rodando em http://localhost:5000
-Conectado ao banco de dados PostgreSQL
-```
+Acesse: http://localhost:5000
 
-### 3. Rodar o frontend
+### 3. Frontend
 
 ```bash
 cd ../frontend
@@ -117,71 +127,58 @@ npm install
 npm start
 ```
 
-A aplicação será aberta automaticamente em: `http://localhost:3000`
+Acesse: http://localhost:3000
 
 ---
 
-## 🐳 Como executar com Docker Compose
-
-### 1. Clonar o repositório
+## 🐳 Rodando com Docker Compose
 
 ```bash
-git clone https://github.com/nayarasn/Project_DevOps.git
-cd Project_DevOps
+docker compose up -d
 ```
-
-### 2. Executar com Docker Compose
-
-```bash
-docker-compose up -d
-```
-
-Este comando irá baixar as imagens do Docker Hub, subir os serviços do **PostgreSQL**, **backend** e **frontend** automaticamente.
 
 Acesse:
 - Frontend: [http://localhost:3000](http://localhost:3000)
-- Backend: [http://localhost:3001](http://localhost:3001)
+- Backend: [http://localhost:5000](http://localhost:5000)
 
-### 3. Parar os containers
+Para parar os containers:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
-> Certifique-se de que o Docker esteja instalado e rodando na sua máquina antes de executar os comandos acima.
-
 ---
 
-## 📷 Captura de tela
-
-> Formulário simples com campos: Nome, Idade, Localização e Pretensão (tecnólogo/bacharel), com botão para salvar.
-
----
-
-## 📦 Build para produção
+## 📦 Build para Produção
 
 ```bash
 cd frontend
 npm run build
 ```
 
-Os arquivos estáticos prontos estarão em `frontend/build/`.
-
 ---
 
-## ✅ Teste da API (Opcional)
+## ✅ Teste da API
 
-Você pode testar com `Postman` ou `curl`:
+Via `curl`:
 
 ```bash
-curl -X POST http://localhost:5000/api/usuarios   -H "Content-Type: application/json"   -d '{"nome":"Ana","idade":22,"localizacao":"SP","pretensao":"tecnologo"}'
+curl -X POST http://localhost:5000/api/usuarios \
+  -H "Content-Type: application/json" \
+  -d '{"nome":"Ana","idade":22,"localizacao":"SP","pretensao":"tecnologo"}'
 ```
 
 ---
 
-## 🙋‍♂️ Autor
+## 👩‍💻 Autor
 
-Projeto criado por [Nayara].
+Projeto criado por **Nayara Santos** – [santosnay99@gmail.com](mailto:santosnay99@gmail.com)
+
+---
+
+## 📥 Download
+
+Você pode baixar a aplicação clicando [aqui](https://github.com/nayarasn/Project_DevOps/archive/refs/heads/main.zip) *(link de exemplo do GitHub)*.
 
 ---
 
