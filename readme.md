@@ -151,7 +151,7 @@ curl -X POST http://localhost:5000/api/usuarios   -H "Content-Type: application/
 
 ## 🙋‍♂️ Autor
 
-Projeto criado por [Edilson].
+Projeto criado por [Nayara].
 
 ---
 
