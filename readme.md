@@ -39,7 +39,11 @@ Project_DevOps/
 │   │   ├── components/
 │   │   │   └── Form.js
 │   │   └── App.js
-│   └── package.json
+├── postgres-init/
+├── .env
+├── .gitignore
+├── docker-compose.yml
+├── image.png
 └── README.md
 ```
 
