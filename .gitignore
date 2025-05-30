@@ -1,0 +1,52 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Build
+build/
+dist/
+*.log
+
+# Environment files
+//.env
+//.env.*.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.sw?
+
+# Coverage
+coverage/
+*.lcov
+
+# React specific
+*.cache/
+*.parcel-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS logs
+logs
+*.log
+yarn.lock
+package-lock.json
+
+# Optional - if using Docker
+docker-compose.override.yml
+
+# Optional - if using testing frameworks
+jest-cache/
+jest-coverage/
+
+# Optional - if using eslint cache
+.eslintcache
+
+# Optional - if deploying with Netlify/Vercel
+.netlify/
+.vercel/
