@@ -18,7 +18,7 @@ services:
       - network_devops
 
   backend:
-    image: naynascimento/back_devops
+    image: naynascimento/back_devops:1.0
     container_name: backend
     restart: always
     ports:
@@ -34,7 +34,7 @@ services:
       - network_devops
 
   frontend:
-    image: naynascimento/front_devops
+    image: naynascimento/front_devops:1.0
     container_name: frontend
     ports:
       - "3000:80"
