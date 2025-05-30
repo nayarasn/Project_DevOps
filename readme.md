@@ -1,4 +1,3 @@
-
 # Aplicação Web de Cadastro de Usuários
 
 Esta é uma aplicação fullstack com **React no frontend**, **Node.js no backend** e **PostgreSQL como banco de dados**.
@@ -70,7 +69,7 @@ CREATE TABLE usuarios (
 Usuário padrão do banco:
 
 - user: `postgres`
-- senha: `junior`
+- senha: `nayara`
 - host: `localhost`
 - porta: `5432`
 
@@ -81,8 +80,8 @@ Usuário padrão do banco:
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd Web_Work
+git clone https://github.com/nayarasn/Project_DevOps.git
+cd Project_DevOps
 ```
 
 ### 2. Rodar o backend
@@ -94,7 +93,7 @@ cp .env.example .env  # ou crie manualmente .env com as variáveis abaixo
 
 # Conteúdo do .env
 DB_USER=postgres
-DB_PASSWORD=junior
+DB_PASSWORD=nayara
 DB_HOST=localhost
 DB_PORT=5432
 DB_DATABASE=devops_work
@@ -119,6 +118,37 @@ npm start
 ```
 
 A aplicação será aberta automaticamente em: `http://localhost:3000`
+
+---
+
+## 🐳 Como executar com Docker Compose
+
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/nayarasn/Project_DevOps.git
+cd Project_DevOps
+```
+
+### 2. Executar com Docker Compose
+
+```bash
+docker-compose up -d
+```
+
+Este comando irá baixar as imagens do Docker Hub, subir os serviços do **PostgreSQL**, **backend** e **frontend** automaticamente.
+
+Acesse:
+- Frontend: [http://localhost:3000](http://localhost:3000)
+- Backend: [http://localhost:3001](http://localhost:3001)
+
+### 3. Parar os containers
+
+```bash
+docker-compose down
+```
+
+> Certifique-se de que o Docker esteja instalado e rodando na sua máquina antes de executar os comandos acima.
 
 ---
 
