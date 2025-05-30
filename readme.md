@@ -18,7 +18,7 @@ Esta é uma aplicação fullstack com **React no frontend**, **Node.js no backen
 
 ## 📷 Captura de Tela
 
-![Tela de Cadastro]![alt text](image.png)
+[Tela de Cadastro]![alt text](image.png)
 
 ---
 
